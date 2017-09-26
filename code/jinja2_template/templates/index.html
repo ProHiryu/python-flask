@@ -5,21 +5,27 @@
     <title></title>
 </head>
 <body>
-    Hello again html!
-    <p>
-        username:{{username}}
-        gender:{{gender}}
-        age:{{age}}
-    </p>
-    <hr>
-    <p>
-        person.name:{{person.name}}
-        person.age:{{person.age}}
-    </p>
-    <hr />
-    <p>
-        websites.baidu:{{websites.baidu}}
-        websites.google:{{websites.google}}
-    </p>
+    {% if user %}
+      <p>
+          username:{{user.username}}
+          gender:{{user.gender}}
+          age:{{user.age}}
+      </p>
+      <hr>
+      <p>
+          person.name:{{user.person.name}}
+          person.age:{{user.person.age}}
+      </p>
+      <hr />
+      <p>
+          websites.baidu:{{user.websites.baidu}}
+          websites.google:{{user.websites.google}}
+      </p>
+    {% else %}
+      <p>
+          Hello again html!
+      </p>
+    {% endif %}
+
 </body>
 </html>
