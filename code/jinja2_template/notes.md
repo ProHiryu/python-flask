@@ -24,6 +24,24 @@
 
 ### for循环遍历和字典
 
+1. 字典的遍历，语法和python一样，可以使用items函数也可以使用keys函数还可以使用values，同样可以使用iterkeys，itervalues
+    ```html
+    {% for k,v in user.items() %}
+    <p>
+      {{k}} : {{v}}
+    </p>
+    {% endfor %}
+    ```
+2. 列表的遍历，语法和python一样
+    ```html
+    {% for website in websites %}
+    <p>
+      {{website}}
+    </p>
+    {% endfor %}
+    ```
+3. 
+
 ### 继承和block
 
 ### url链接
