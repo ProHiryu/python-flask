@@ -8,6 +8,21 @@
 
 <body>
 <img src="{{avator|default('') }}" alt="">
+<hr />
+
+<p>
+  评论数目：{{comments|length}}
+</p>
+
+<ul>
+  {% for comment in comments %}
+  <li>
+    <a>{{comment.user}}</a>
+    <p>{{comment.comment}}</p>
+  </li>
+  {% endfor %}
+</ul>
+
 </body>
 
 </html>

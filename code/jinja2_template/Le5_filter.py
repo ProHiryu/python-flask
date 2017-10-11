@@ -5,7 +5,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index_filter.html',avator='https://i0.hdslb.com/bfs/face/3075872e777c6001b4a5233230f4d7aa49eb2146.jpg@68w_68h.webp')
+    comments = [
+        {
+            'user':u'dsfjks',
+            'comment':u'you are one'
+        },
+        {
+            'user':u'fsfkjsl',
+            'comment':u'you are two'
+        }
+    ]
+    return render_template('index_filter.html',comments=comments)
 
 
 if __name__ == '__main__':

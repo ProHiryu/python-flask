@@ -51,6 +51,19 @@
       ```
 2. default过滤器：如果当前变量不存在，则使用默认值
 3. length过滤器：计算当前变量的长度，用法同python当中的length函数
+4. 常用过滤器：
+    * float：将传入变量代码块中的值转换为浮点数，类似于 Python 的 float()
+    * int：类似于 Python 的 int()
+    * title：将传入变量代码块的 String 的首字母转换成大写，成为一个合格的 Title
+    * round：类似于 Python 的 round() 定义浮点数的精度
+        - common 参数：四舍五入 - {{ 4.7 | rount(1, "common")}}
+        - floor 参数：截取整数部分
+        - ceil 参数：向上取整
+    * join：将传入变量代码块的列表变量中的元素作为字符串连接起来，类似于 Python 的 join()
+    * tojson：过滤器 tojoin 实际上是调用了 Python 的 json.dumps 函数来序列化对象，一样的需要确保传入变量代码块的是一个可以被序列化的对象 Dict
+    * truncate：用于截取指定长度的 String 对象，并在截取后的子字符串后添加省略号
+    * escape：如果传入变量代码块的是 HTML 字符串，则将该字符串中的 &、<、>、’、” 作为 HTML 的转义序列打印
+    * safe：safe 过滤器含有 escape 的功能，将传入到变量代码块中的 HTML 字符串中的特殊符号进行 HTML 转义，这是必要的安全手段
 
 ### 继承和block
 
