@@ -67,8 +67,43 @@
 
 ### 继承和block
 
+1. 继承作用和语法：
+    * 作用：可以把一些公共的代码放在父模版中，避免重复代码
+    * 语法：
+      ```html
+      {% extends 'base.html' %}
+      ```
+2. block:
+    * python block:
+      ```python
+      class Person(object):
+          name = ''
+          age = 0
+
+          def func():
+              pass
+
+      class Student(Person):
+
+          def func():
+              print("Student")
+      ```
+    * 作用：可以让子模版实现一些自己的需求，父模版需要提前定义好
+    * 注意：子模版当中的代码块必须放在block当中
+    * 语法：
+      ```html
+      <!--父模版-->
+      {% block main %}
+      {% endblock %}
+
+      <!--子模版-->
+      {% extends 'base.html' %}
+
+      {% block main %}
+          <h1>这是登录页面</h1>
+      {% endblock %}
+      ```
+
 ### url链接
 
 ### 加载静态文件
-
-
