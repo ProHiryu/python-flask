@@ -104,6 +104,14 @@
       {% endblock %}
       ```
 
-### url链接
+### url链接：使用`url_for{视图函数名称}`可以反转url
 
 ### 加载静态文件
+1. 语法：`url_for('static',filename='route')`
+2. 可以加载css和js文件和图片等静态元素
+3. examples:
+    ```html
+    <a href="{{ url_for('login') }}">登录</a>
+    <img src="{{ url_for('static',filename='images/test.jpg') }}" alt="r">
+    <script src="{{ url_for('static',filename='js/index.js') }}" ></script>
+    ```
